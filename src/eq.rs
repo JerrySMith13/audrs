@@ -109,7 +109,11 @@ impl EqFactory{
         }
     }
     pub fn new(raw_channel: Receiver<Vec<f32>>, eqed: Sender<Vec<(f32, f32)>>, analyzer: EqAnalyze) -> Self{
-
+        return Self{
+            aud: raw_channel,
+            eq: eqed,
+            analyzer
+        }
     }
 }
 

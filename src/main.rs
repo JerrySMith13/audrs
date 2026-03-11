@@ -31,7 +31,9 @@ fn main() {
     let (send_raw, recv_raw) = mpsc::channel();
     let (send_eq, recv_eq) = mpsc::channel();
 
-    let
+    let factory = eq::EqFactory {
+
+    }
     thread::spawn(|| {
 
     })
